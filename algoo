@@ -1,0 +1,39 @@
+print('@@@ @  @@@ @@@@   @   @ @ @@@@@@     @@@')
+print('@ @ @ @  @ @   @  @   @ @ @     @   @   @')
+print("@ @ @ @@@@ @  @   @@@@@ @ @@@@@@    @@@@@")
+print("@ @@@ @  @ @@     @   @ @ @    @    @   @")
+
+while True:
+    print("---PROGRAM KONVERSI BILANGAN---")
+    print("Pilih operasi:")
+    print("1. Angka ke Biner")
+    print("2. Biner ke Angka")
+    print("3. exit")
+    
+    pilihan = input("Masukkan nomor operasi yang ingin Anda lakukan (1/2/3): ")
+
+    if pilihan == '1':
+        angka = int(input("Masukkan bilangan angka: "))
+        biner = ''
+        if angka == 0:
+            biner = '0'
+        else:
+            while angka > 0:
+                sisa = angka % 2
+                biner = str(sisa) + biner
+                angka = angka // 2
+        print(f"Hasil konversi ke biner: {biner}")
+    elif pilihan == '2':
+        biner = input("Masukkan bilangan biner: ")
+        angka = 0
+        for digit in biner:
+            angka = angka * 2 + int(digit)
+        print(f"Hasil konversi ke angka: {angka}")
+    elif pilihan == '3':
+        print("Terima kasih!!!!!")
+        break
+    else:
+        print("Pilihan tidak valid. Silakan pilih 1, 2, atau 3.")
+
+    
+    
